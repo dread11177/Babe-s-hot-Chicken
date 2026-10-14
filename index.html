@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Babe's Hot Chicken | F-7 Markaz, Islamabad</title>
+<meta name="description" content="Nashville-style hot chicken, tenders, loaded fries and more in F-7 Markaz, Islamabad. Open late until 4 am.">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#fff6ea;--bg2:#ffe9cf;--card:#ffffff;--text:#2a1410;--muted:#6f544c;
+  --red:#d62718;--red2:#ff5a1f;--gold:#ffb81f;--dark:#1c0d0a;--line:#f0d6b8;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#1a0e0b;--bg2:#26130e;--card:#2d1812;--text:#fff1e2;--muted:#c9a898;--line:#4a2a20;}
+}
+:root[data-theme="dark"]{--bg:#1a0e0b;--bg2:#26130e;--card:#2d1812;--text:#fff1e2;--muted:#c9a898;--line:#4a2a20;}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55}
+h1,h2,h3,.brand{font-family:Impact,"Arial Black","Helvetica Neue",Arial,sans-serif;letter-spacing:.02em;text-transform:uppercase;margin:0}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--dark);color:#fff}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-size:1.3rem;color:var(--gold);text-decoration:none}
+nav{display:flex;gap:18px;font-size:.92rem}
+nav a{text-decoration:none;opacity:.85}nav a:hover{opacity:1;color:var(--gold)}
+@media(max-width:560px){nav a:not(.cta-s){display:none}}
+.cta-s{background:var(--red);padding:7px 14px;border-radius:99px;font-weight:700;opacity:1}
+.hero{background:radial-gradient(circle at 80% 20%,#ff5a1f 0,transparent 45%),linear-gradient(135deg,#8f1409,#d62718 55%,#ff7a1f);color:#fff;padding:72px 0 80px;position:relative;overflow:hidden}
+.hero .tag{display:inline-block;background:rgba(0,0,0,.28);padding:6px 14px;border-radius:99px;font-size:.85rem;font-weight:600}
+.hero h1{font-size:clamp(2.8rem,10vw,6rem);line-height:.95;margin:18px 0 14px;text-shadow:0 3px 0 rgba(0,0,0,.25)}
+.hero h1 span{color:var(--gold)}
+.hero p{max-width:520px;font-size:1.1rem;margin:0 0 26px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:13px 24px;border-radius:99px;font-weight:700;text-decoration:none;border:2px solid transparent}
+.btn.primary{background:var(--gold);color:#2a1410}
+.btn.ghost{border-color:#fff;color:#fff}
+.btn.primary:hover{background:#fff}.btn.ghost:hover{background:rgba(255,255,255,.15)}
+.facts{display:flex;flex-wrap:wrap;gap:22px;margin-top:34px;font-size:.95rem}
+.facts b{display:block;font-size:1.5rem;font-family:Impact,"Arial Black",Arial,sans-serif}
+section{padding:64px 0}
+section.alt{background:var(--bg2)}
+.h2{font-size:clamp(2rem,6vw,3rem);color:var(--red);margin-bottom:8px}
+.sub{color:var(--muted);margin:0 0 30px;max-width:560px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+.card h3{font-size:1.2rem;margin-bottom:6px}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.badge{display:inline-block;background:var(--red2);color:#fff;font-size:.7rem;font-weight:700;padding:3px 10px;border-radius:99px;margin-bottom:10px;text-transform:uppercase}
+.heat{margin-top:14px;display:flex;gap:4px;align-items:center;font-size:.8rem;color:var(--muted)}
+.heat i{width:18px;height:8px;border-radius:4px;background:var(--line)}
+.heat i.on{background:linear-gradient(90deg,var(--gold),var(--red))}
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.quote{background:var(--card);border-left:5px solid var(--red);border-radius:12px;padding:20px}
+.quote p{margin:0 0 10px}.quote small{color:var(--muted)}
+.score{display:flex;align-items:center;gap:14px;margin-bottom:26px}
+.score .n{font-family:Impact,"Arial Black",Arial,sans-serif;font-size:3.4rem;color:var(--red);line-height:1}
+.stars{color:var(--gold);letter-spacing:2px;font-size:1.2rem}
+.visit{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.visit .card p{color:var(--text)}
+.visit h3{color:var(--red);margin-bottom:8px}
+.pill{display:inline-block;background:var(--bg2);border:1px solid var(--line);border-radius:99px;padding:5px 12px;font-size:.85rem;margin:3px 3px 0 0}
+.slot{margin-top:14px}.slot .add{background:var(--red);color:#fff;border:0;border-radius:99px;padding:8px 18px;font:inherit;font-weight:700;cursor:pointer}.slot .add:hover{background:var(--red2)}
+.qty{display:inline-flex;align-items:center;gap:12px;font-weight:700}
+.qty button,.x{width:34px;height:34px;border-radius:50%;border:0;background:var(--red);color:#fff;font-size:1.1rem;cursor:pointer}
+#bar{position:fixed;left:0;right:0;bottom:0;padding:12px 18px calc(12px + env(safe-area-inset-bottom,0px));background:var(--dark);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:12px;z-index:20;transform:translateY(120%);transition:transform .25s}
+#bar.show{transform:none}body.hasbar{padding-bottom:76px}
+#sheet{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:30;display:flex;align-items:flex-end;justify-content:center}
+#sheet[hidden]{display:none}
+.panel{background:var(--bg);color:var(--text);width:100%;max-width:560px;max-height:92%;overflow:auto;border-radius:20px 20px 0 0;padding:20px 20px calc(20px + env(safe-area-inset-bottom,0px))}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.panel label{display:block;font-size:.85rem;font-weight:600;margin:12px 0 4px}
+.panel input,.panel select,.panel textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--text);font:inherit}
+#err{color:var(--red);font-weight:600;min-height:1.2em;margin:10px 0 0}
+.panel .btn{width:100%;text-align:center;cursor:pointer;font:inherit;font-weight:700;margin-top:10px}
+.panel .btn.wa{background:#25d366;color:#06361a}
+.panel .btn.alt{background:transparent;border-color:var(--red);color:var(--red)}
+.note{font-size:.82rem;color:var(--muted);margin:12px 0 0}
+
+#staff{padding:36px 0 70px;min-height:70vh}
+.sbtn{background:var(--red);color:#fff;border:0;border-radius:99px;padding:10px 20px;font:inherit;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block}
+.sbtn.sm{padding:6px 12px;font-size:.85rem}.sbtn.ghost{background:transparent;color:var(--red);border:1.5px solid var(--red)}
+.sbox{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;max-width:400px}
+#staff label{display:block;font-size:.85rem;font-weight:600;margin:12px 0 4px}
+#staff input,#staff textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--text);font:inherit}
+#staff textarea{min-height:190px}
+.serr{color:var(--red);font-weight:600;min-height:1.3em;margin:10px 0 0}
+.sbar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.sbar div{display:flex;gap:8px;flex-wrap:wrap}
+.sbanner{background:var(--gold);color:#2a1410;border-radius:10px;padding:10px 14px;margin:12px 0;font-size:.9rem}
+.sstats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0}
+.sstat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.sstat b{display:block;font-size:1.5rem;color:var(--red)}.sstat span{font-size:.8rem;color:var(--muted)}
+.sboard{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;align-items:start}
+.scol{background:var(--bg2);border-radius:16px;padding:10px}
+.scol h3{font-size:.95rem;margin:4px 6px 10px;display:flex;justify-content:space-between;font-family:inherit;letter-spacing:.05em}
+.so{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px;font-size:.92rem}
+.so .t{display:flex;justify-content:space-between;gap:8px;font-weight:700}
+.so small,.sempty{color:var(--muted)}.so ul{margin:8px 0;padding-left:18px}
+.stag{display:inline-block;background:var(--bg2);border-radius:99px;padding:2px 9px;font-size:.75rem;font-weight:600;margin-right:6px}
+.sacts{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+#ssheet,#sacct{position:fixed;inset:0;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;padding:16px;z-index:40}
+#ssheet[hidden],#sacct[hidden]{display:none}
+.spanel{background:var(--bg);width:100%;max-width:520px;border-radius:18px;padding:20px;max-height:92%;overflow:auto}
+.steps{display:flex;gap:6px;margin:16px 0}.steps div{flex:1;text-align:center;font-size:.78rem;padding-top:12px;position:relative;color:var(--muted)}
+.steps div:before{content:"";position:absolute;top:0;left:0;right:0;height:6px;border-radius:3px;background:var(--line)}
+.steps .on{color:var(--text);font-weight:700}.steps .on:before{background:linear-gradient(90deg,var(--gold),var(--red))}
+#track .btn{border:0;cursor:pointer;font:inherit;font-weight:700}#track input{padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--text);font:inherit;width:100%;max-width:300px;margin:8px 0}
+body.dashmode header,body.dashmode footer{display:none}
+body.dashmode #staff{padding:8px 0 40px}
+body.dashmode #staff .wrap{max-width:1200px;padding:16px}
+footer{background:var(--dark);color:#d9bfae;text-align:center;padding:30px 20px;font-size:.9rem}
+footer b{color:var(--gold)}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top">Babe's Hot Chicken</a>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+      <a href="#track">Track</a>
+      <a href="#staff" style="font-size:.85rem;opacity:.85">Staff</a>
+      <a class="cta-s" href="tel:+923441111804">Call</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">🔥 Fast food · F-7 Markaz, Islamabad</span>
+    <h1>Hot chicken.<br><span>Seriously juicy.</span></h1>
+    <p>Crispy Nashville-style tenders, sandwiches and loaded fries with sauces for every heat level. Eat in, pick up, or get it delivered, open late until 4 am.</p>
+    <div class="btns">
+      <a class="btn primary" href="#menu">Order now</a>
+      <a class="btn ghost" href="tel:+923441111804">Call 0344 1111804</a>
+    </div>
+    <div class="facts">
+      <div><b>3.7 ★</b>822 Google reviews</div>
+      <div><b>4 AM</b>Closing time</div>
+      <div><b>Rs 1,000–4,000</b>per person</div>
+    </div>
+  </div>
+</div>
+
+<section id="menu">
+  <div class="wrap">
+    <h2 class="h2">Menu highlights</h2>
+    <p class="sub">Fan favourites from our kitchen. Tap Add on anything you like, then send your order straight to the restaurant on WhatsApp.</p>
+    <div class="grid">
+      <div class="card"><span class="badge">Popular</span><h3>Chicken Sandwich</h3><p>Nashville-style crispy chicken stacked in a toasted bun.</p></div>
+      <div class="card"><span class="badge">Popular</span><h3>Mad Spicy</h3><p>Our hottest heat level, served with a cooling white dip.</p>
+        <div class="heat"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i>&nbsp;Max heat</div></div>
+      <div class="card"><h3>Chicken Tenders</h3><p>Big, juicy tenders with a choice of sauces.</p></div>
+      <div class="card"><h3>Hot Chicken with Fries</h3><p>The classic plate, crispy chicken with golden fries.</p></div>
+      <div class="card"><h3>Hot Thigh Pieces</h3><p>Bone-in, tender and full of flavour.</p></div>
+      <div class="card"><h3>Wings &amp; Fries Deal</h3><p>Chicken wings with fries, made for sharing.</p></div>
+      <div class="card"><h3>Sandwich &amp; Salad</h3><p>A lighter combo for a fresher bite.</p></div>
+      <div class="card"><h3>Loaded Fries &amp; Mac n Cheese</h3><p>Comforting sides guests love adding to their order.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="reviews">
+  <div class="wrap">
+    <h2 class="h2">What guests say</h2>
+    <div class="score"><div class="n">3.7</div><div><div class="stars">★★★★☆</div><small>Based on 822 Google reviews</small></div></div>
+    <div class="quotes">
+      <div class="quote"><p>Friendly, attentive staff, and the order came out quickly and served perfectly.</p><small>Google review</small></div>
+      <div class="quote"><p>The hot tenders were big, juicy, economical and full of flavour, with plenty of sauce options.</p><small>Google review</small></div>
+      <div class="quote"><p>Needed a waiter at the car, but the order arrived fast with a smile. Atmosphere is alright.</p><small>Google review</small></div>
+    </div>
+    <p style="margin-top:24px"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Babe%27s+Hot+Chicken+F-7+Islamabad" target="_blank" rel="noopener">Rate us on Google</a></p>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <h2 class="h2">Come hungry</h2>
+    <p class="sub">Find us in F-7 Markaz, with outdoor seating when you want to eat in.</p>
+    <div class="visit">
+      <div class="card">
+        <h3>Address</h3>
+        <p>F-7 College Road, near Gourmet Bakery,<br>F-7 Markaz, Islamabad 46000</p>
+        <p style="margin-top:14px"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Babe%27s+Hot+Chicken+F-7+Islamabad" target="_blank" rel="noopener">Get directions</a></p>
+      </div>
+      <div class="card">
+        <h3>Hours &amp; contact</h3>
+        <p>Open late, closing at 4 am.<br>Phone: <a href="tel:+923441111804"><b>0344 1111804</b></a></p>
+        <p style="margin-top:12px"><span class="pill">Dine-in</span><span class="pill">Outdoor seating</span><span class="pill">Pickup</span><span class="pill">Delivery</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="alt" id="track"><div class="wrap">
+  <h2 class="h2">Track your order</h2>
+  <p class="sub">We confirm your order and give you its number on WhatsApp, then message you again when it is being prepared and when it is ready.</p>
+  <div class="card" id="tk"></div>
+</div></section>
+</main>
+
+<section id="staff" hidden><div class="wrap">
+ <div id="slogin">
+  <h2 class="h2">Staff login</h2>
+  <p class="sub">For Babe's Hot Chicken team members only.</p>
+  <div class="sbox">
+   <label for="su">Username</label><input id="su" autocomplete="username" autocapitalize="none">
+   <label for="sp">Password</label><input id="sp" type="password" autocomplete="current-password">
+   <p class="serr" id="serr" role="alert"></p>
+   <button type="button" class="sbtn" id="sgo">Log in</button>
+   <a class="sbtn ghost" href="#top" style="margin-left:6px">Back to website</a>
+  </div>
+  <p style="margin:16px 0 0"><a href="#" id="toreg">New staff? Register here</a></p>
+  <div class="sbox" id="regbox" hidden style="margin-top:12px">
+   <h3 style="color:var(--red);font-size:1.3rem">Staff registration</h3>
+   <label for="rn">Full name</label><input id="rn" autocomplete="name">
+   <label for="ru">Choose a username</label><input id="ru" autocomplete="off" autocapitalize="none">
+   <label for="rp">Password (8+ characters)</label><input id="rp" type="password" autocomplete="new-password">
+   <label for="rp2">Confirm password</label><input id="rp2" type="password" autocomplete="new-password">
+   <p class="serr" id="rerr" role="alert"></p>
+   <button type="button" class="sbtn" id="rgo">Register</button>
+  </div>
+ </div>
+ <div id="sdash" hidden>
+  <div class="sbar"><h2 class="h2" style="margin:0;font-size:1.7rem">Orders dashboard</h2>
+   <div><button type="button" class="sbtn" id="sadd">+ Add order</button><input type="month" id="smonth" aria-label="Month to export" style="width:auto;padding:8px 10px;display:none"><button type="button" class="sbtn ghost" id="sexport" style="display:none">Export to Excel</button><button type="button" class="sbtn ghost" id="sacctbtn" style="display:none">Staff accounts</button><button type="button" class="sbtn ghost" id="sexport2" style="display:none">Export staff &amp; attendance</button><a class="sbtn ghost" href="#top">Website</a><button type="button" class="sbtn ghost" id="slogout">Log out</button></div></div>
+  
+  <div class="sbanner" id="sbanner" hidden></div>
+  <div class="sstats" id="sstats"></div>
+  <div class="sboard" id="sboard"></div>
+ </div>
+</div></section>
+<div id="sacct" hidden><div class="spanel"><h3 style="font-size:1.5rem;color:var(--red);margin-bottom:10px">Staff accounts</h3><div id="admout" style="margin-bottom:14px"></div>
+  <p class="serr" id="sacctmsg" role="alert"></p><div id="slist"></div><pre id="sdiag" hidden style="display:none;white-space:pre-wrap;font-size:.7rem;color:var(--muted);margin:10px 0 0"></pre><p style="margin-top:12px"><button type="button" class="sbtn ghost" id="sacctclose">Close</button></p></div></div>
+<div id="ssheet" hidden><div class="spanel" id="staffmodal">
+ <h3 style="font-size:1.5rem;color:var(--red);margin-bottom:6px">Add an order</h3>
+ <p style="color:var(--muted);margin:0 0 10px;font-size:.9rem">Paste the WhatsApp order message, or type the order in the same shape. If there is no Order line, the next number (BHC-0001, BHC-0002, ...) is assigned automatically.</p>
+ <textarea id="stxt" placeholder="2 x Chicken Tenders&#10;1 x Mad Spicy&#10;Total: Rs 2400&#10;Name: Ali&#10;Phone: 0344 1111804&#10;Type: Pickup&#10;Notes: extra sauce"></textarea>
+ <p class="serr" id="sserr" role="alert"></p>
+ <button type="button" class="sbtn" id="ssave">Add to board</button> <button type="button" class="sbtn ghost" id="scancel">Cancel</button>
+</div></div>
+<div id="bar"><span id="bc"></span><button class="btn primary" id="open" type="button">View order</button></div>
+<div id="sheet" hidden>
+ <div class="panel" role="dialog" aria-modal="true" aria-label="Your order">
+  <div class="row" style="border:0"><h3 style="font-size:1.7rem;color:var(--red)">Your order</h3><button type="button" class="x" id="close" aria-label="Close">&#10005;</button></div>
+  <div id="lines"></div>
+  <div id="total" style="font-weight:700;padding-top:10px"></div>
+  <label for="f-name">Your name</label><input id="f-name" autocomplete="name">
+  <label for="f-phone">Phone number</label><input id="f-phone" type="tel" autocomplete="tel" placeholder="03xx xxxxxxx">
+  <label for="f-type">How would you like it?</label>
+  <select id="f-type"><option>Pickup</option><option>Delivery</option><option>Dine-in</option></select>
+  <div id="addrbox" hidden><label for="f-addr">Delivery address</label><textarea id="f-addr" rows="2"></textarea></div>
+  <label for="f-notes">Notes (heat level, sauces, allergies)</label><input id="f-notes">
+  <p id="err" role="alert"></p>
+  <button type="button" class="btn wa" id="wa">Send order on WhatsApp</button>
+  <button type="button" class="btn alt" id="copy">Copy order text</button>
+  <p class="note">Your order opens in WhatsApp as a message to the restaurant, who will confirm it with you. Prefer a call? <a href="tel:+923441111804">0344 1111804</a></p>
+ </div>
+</div>
+<footer>
+  <b>Babe's Hot Chicken</b> · F-7 Markaz, Islamabad · 0344 1111804<br><a href="#staff" style="color:var(--gold)">Staff login</a>
+</footer>
+<script>
+(function(){
+  // Optional: add prices here, e.g. "Chicken Tenders": 850. Totals show once every item in the order has a price.
+  var PRICES={};
+  var WA='923441111804';
+  var cart=new Map();var oid='';function newId(){return ''}oid=newId();
+  function $(id){return document.getElementById(id)}
+  var cards=[].slice.call(document.querySelectorAll('#menu .card'));
+  cards.forEach(function(c){
+    var n=c.querySelector('h3').textContent.trim();
+    c.dataset.item=n;
+    if(PRICES[n]){var p=document.createElement('p');p.textContent='Rs '+PRICES[n];p.style.cssText='font-weight:700;color:var(--red);margin-top:8px';c.appendChild(p)}
+    var s=document.createElement('div');s.className='slot';c.appendChild(s);
+  });
+  function mk(t,cls,fn){var b=document.createElement('button');b.type='button';b.textContent=t;if(cls)b.className=cls;b.onclick=fn;return b}
+  function qtyUI(n,box){
+    var q=cart.get(n)||0;box.textContent='';
+    if(!q){box.appendChild(mk('Add','add',function(){set(n,1)}));return}
+    var w=document.createElement('span');w.className='qty';
+    var m=mk('\u2212','',function(){set(n,(cart.get(n)||0)-1)});m.setAttribute('aria-label','Remove one '+n);
+    var s=document.createElement('span');s.textContent=q;
+    var p=mk('+','',function(){set(n,(cart.get(n)||0)+1)});p.setAttribute('aria-label','Add one '+n);
+    w.appendChild(m);w.appendChild(s);w.appendChild(p);box.appendChild(w);
+  }
+  function set(n,q){if(q<=0)cart['delete'](n);else cart.set(n,q);refresh()}
+  function count(){var t=0;cart.forEach(function(q){t+=q});return t}
+  function total(){var t=0,ok=true;cart.forEach(function(q,n){if(PRICES[n])t+=PRICES[n]*q;else ok=false});return ok&&cart.size?t:null}
+  function refresh(){
+    cards.forEach(function(c){qtyUI(c.dataset.item,c.querySelector('.slot'))});
+    var k=count();$('bc').textContent=k+(k===1?' item':' items')+' in your order';
+    $('bar').classList.toggle('show',k>0);document.body.classList.toggle('hasbar',k>0);
+    var L=$('lines');L.textContent='';
+    cart.forEach(function(q,n){
+      var r=document.createElement('div');r.className='row';
+      var a=document.createElement('span');a.textContent=n;
+      var b=document.createElement('span');qtyUI(n,b);
+      r.appendChild(a);r.appendChild(b);L.appendChild(r);
+    });
+    var t=total();$('total').textContent=t!==null?'Total: Rs '+t:'';
+    if(!k&&!$('sheet').hidden)$('sheet').hidden=true;
+  }
+  function msg(){
+    var lines=["New order for Babe's Hot Chicken"];
+    cart.forEach(function(q,n){lines.push(q+' x '+n)});
+    var t=total();if(t!==null)lines.push('Total: Rs '+t);
+    lines.push('');lines.push('Name: '+$('f-name').value.trim());
+    lines.push('Phone: '+$('f-phone').value.trim());
+    var ty=$('f-type').value;lines.push('Type: '+ty);
+    if(ty==='Delivery')lines.push('Address: '+$('f-addr').value.trim());
+    var nt=$('f-notes').value.trim();if(nt)lines.push('Notes: '+nt);
+    return lines.join('\n');
+  }
+  function valid(){
+    var e='';
+    if(!cart.size)e='Add at least one item.';
+    else if(!$('f-name').value.trim())e='Please enter your name.';
+    else if($('f-phone').value.replace(/\D/g,'').length<10)e='Please enter a valid phone number.';
+    else if($('f-type').value==='Delivery'&&!$('f-addr').value.trim())e='Please enter your delivery address.';
+    $('err').textContent=e;return !e;
+  }
+  $('open').onclick=function(){$('sheet').hidden=false;$('err').textContent=''};
+  $('close').onclick=function(){$('sheet').hidden=true};
+  $('sheet').onclick=function(e){if(e.target===$('sheet'))$('sheet').hidden=true};
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')$('sheet').hidden=true});
+  $('f-type').onchange=function(){$('addrbox').hidden=$('f-type').value!=='Delivery'};
+  $('wa').onclick=function(){if(!valid())return;var text=msg(),items=[];cart.forEach(function(q,n){items.push(q+' x '+n)});var id=oid;window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(text),'_blank','noopener');document.dispatchEvent(new CustomEvent('bhc-order',{detail:{id:id,items:items,at:Date.now()}}));cart.clear();oid=newId();$('sheet').hidden=true;refresh();location.hash='#track'};
+  $('copy').onclick=function(){
+    if(!valid())return;
+    try{navigator.clipboard.writeText(msg()).then(function(){$('err').textContent='Order copied. Paste it into WhatsApp or SMS.'},function(){$('err').textContent='Could not copy. Please use the WhatsApp button.'})}
+    catch(x){$('err').textContent='Could not copy. Please use the WhatsApp button.'}
+  };
+  refresh();
+})();
+</script>
+<script>
+(function(){
+var STAFF=[{"u": "staff", "s": "d93efb7082f0a2ac", "h": "5611a028c3747f41cbff442d6b80c986de65de66e52188e81613215b9075ae08", "r": "staff"}, {"u": "admin", "s": "74a35c5f7b8beeb8", "h": "f350436d79c6d5f9b1d1bdc157053fc05a8db0610cadaeb0d897a5d731723d06", "r": "admin"}];
+var PUB={"kty": "EC", "crv": "P-256", "x": "0sErclhUQOeEmTyvtIhjitGtC9bW8KcHil56elbv3bY", "y": "l19hHaM3WMpKoH6wXOha14YY7hC6njqMgLHC_qzglug"},WRAP={"s": "6VJHhu8HZyN8Mv8zPT5RMg==", "i": "QkosNi5g6YHD8ocA", "c": "P/5a7CgRlmpjQbXJkSlS6q4qcsLM4cIXSEXC/H3BikhZMpfeEPTl7VreFnl7+9DEbiAHbsjp7C4jTwSuc3bJVjYHG+wK3aACkJQT3+AuAgFCcCxhtPlXzbk2w+Jhe/iMWWInFNZXgTzbZPr0fpXxp+U2OOqFQf4Su+68iln0ji5iTwEfUgupUynJOIGVddkH6Y5PWelsFt6imp8iNELgezTdCdK3jC7Q8CrhOdeuJZG+dvx2x0FD7S18fogwbJxkfVnDYdxX2Rlya8iQpouMbsg8Ox3tgl0bWnV0bSB4"},ADMINWA='923441111804',signKey=null;
+var ST=["new","prep","ready","done"],LBL={"new":"New",prep:"Preparing",ready:"Ready",done:"Done"};
+var NEXT={"new":"Start preparing",prep:"Mark ready",ready:"Complete"};
+var orders=new Map(),col=null,armed=null,started=false,fails=0,lock=0,authOk=false;
+var role='staff',who='',aid='';
+try{var ss=JSON.parse(sessionStorage.getItem('bhc_staff')||'null');if(ss&&ss.u){authOk=true;role=ss.r;who=ss.u;aid=ss.a||''}}catch(e){}
+function $(i){return document.getElementById(i)}
+function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+function err(t){$('serr').textContent=t}
+function banner(t){$('sbanner').textContent=t;$('sbanner').hidden=!t}
+var main=document.querySelector('main');
+function route(){
+  var s=location.hash==='#staff';
+  $('staff').hidden=!s;main.hidden=s;$('bar').style.display=s?'none':'';
+  document.body.classList.toggle('dashmode',s&&authOk);
+  applyRole();
+  if(s){$('slogin').hidden=authOk;$('sdash').hidden=!authOk;if(authOk)start();window.scrollTo(0,0)}
+  else if(location.hash.length>1){var t=document.getElementById(location.hash.slice(1));if(t)t.scrollIntoView()}
+}
+window.addEventListener('hashchange',route);
+async function sha(t){var b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(t));return[].map.call(new Uint8Array(b),function(x){return x.toString(16).padStart(2,'0')}).join('')}
+function enc(t){return new TextEncoder().encode(t)}
+function b64(buf){var a=new Uint8Array(buf),s='';for(var i=0;i<a.length;i++)s+=String.fromCharCode(a[i]);return btoa(s)}
+function unb64(t){var b=atob(t),a=new Uint8Array(b.length);for(var i=0;i<b.length;i++)a[i]=b.charCodeAt(i);return a}
+function tob(t){return btoa(unescape(encodeURIComponent(t)))}
+function fromb(t){return decodeURIComponent(escape(atob(t)))}
+async function unwrap(pw){
+  var k0=await crypto.subtle.importKey('raw',enc(pw),'PBKDF2',false,['deriveKey']);
+  var k=await crypto.subtle.deriveKey({name:'PBKDF2',salt:unb64(WRAP.s),iterations:150000,hash:'SHA-256'},k0,{name:'AES-GCM',length:256},false,['decrypt']);
+  var pt=await crypto.subtle.decrypt({name:'AES-GCM',iv:unb64(WRAP.i)},k,unb64(WRAP.c));
+  signKey=await crypto.subtle.importKey('jwk',JSON.parse(new TextDecoder().decode(pt)),{name:'ECDSA',namedCurve:'P-256'},false,['sign']);
+}
+async function signText(d){return b64(await crypto.subtle.sign({name:'ECDSA',hash:'SHA-256'},signKey,enc(d)))}
+async function verifyText(d,g){var pk=await crypto.subtle.importKey('jwk',PUB,{name:'ECDSA',namedCurve:'P-256'},false,['verify']);return crypto.subtle.verify({name:'ECDSA',hash:'SHA-256'},pk,unb64(g),enc(d))}
+function waTo(num,text){var d=(num||'').replace(/\D/g,'');if(d.indexOf('0')===0)d='92'+d.slice(1);window.open('https://wa.me/'+d+'?text='+encodeURIComponent(text),'_blank','noopener')}
+function cleanCode(t,pre){t=(t||'').replace(/\s/g,'');return t.indexOf(pre)===0?t.slice(pre.length):t}
+var dbp=null;
+var fallbackDl={save:async function(r){var blob=new Blob([r.data],{type:'application/octet-stream'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=r.filename;document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},1000);return{status:'saved'}}};
+var dlog=[];
+function dl(t){dlog.push(new Date().toLocaleTimeString()+' '+t);if(dlog.length>10)dlog.shift();var e=document.getElementById('sdiag');if(e)e.textContent=dlog.join('\n')}
+dl('Build 15');
+window.addEventListener('unhandledrejection',function(e){dl('error: '+(e.reason&&e.reason.message||e.reason))});
+function getDb(){if(!dbp)dbp=(async function(){try{var u=window.claude&&await claude.use('user');dl('user capability: '+(u?'yes':'no'));if(u&&u.can('data.write')!==false){var d=await claude.use('db');dl('shared storage: '+(d?'available':'not available'));return d}dl('shared storage: no write access')}catch(e){dl('shared storage error: '+(e&&e.message||e))}return null})();return dbp}
+function localList(){try{return JSON.parse(localStorage.getItem('bhc_accts')||'[]')}catch(e){return[]}}
+function mergeAcc(a,b){var m={};a.concat(b).forEach(function(x){var o=m[x.u],xv=x.v||0,ov=o?(o.v||0):0;if(!o||xv>ov||(xv===ov&&(x.ut||0)>=(o.ut||0)))m[x.u]=x});return Object.keys(m).map(function(k){return m[k]})}
+function saveLocal(l){try{localStorage.setItem('bhc_accts',JSON.stringify(l));return true}catch(e){return false}}
+function tmo(p,ms){return new Promise(function(res,rej){var t=setTimeout(function(){rej(new Error('shared storage did not respond'))},ms);p.then(function(v){clearTimeout(t);res(v)},function(e){clearTimeout(t);rej(e)})})}
+var memo={},tomb={};
+var store={
+  list:async function(){
+    var r=[],db=await getDb();
+    if(db){try{var q=await tmo(db.collection('staff').get(),8000);r=q.docs.map(function(d){var x=Object.assign({},d.data());x.u=x.u||d.id;return x});dl('shared list: '+r.map(function(z){return z.u+'='+(z.st||'?')+'/v'+(z.v||0)}).join(', '))}catch(e){dl('shared list failed: '+(e&&e.message||e))}}
+    var all=mergeAcc(mergeAcc(localList(),r),Object.keys(memo).map(function(k){return memo[k]}));
+    return all.filter(function(x){return !(tomb[x.u]&&tomb[x.u]>=(x.ut||0))});
+  },
+  put:async function(a){
+    a=Object.assign({},a,{ut:Date.now()});memo[a.u]=a;delete tomb[a.u];
+    var lok=saveLocal(localList().filter(function(x){return x.u!==a.u}).concat([a])),ok=lok,db=await getDb(),msg='';
+    if(db){try{await tmo(db.collection('staff').doc(a.u).set(a),8000);ok=true;msg=''}catch(e){msg=e&&e.message||'shared storage error'}}
+    dl('saved '+a.u+' status='+a.st+' v'+(a.v||0)+': this device '+(lok?'ok':'failed')+', shared '+(db?(msg?'failed ('+msg+')':'ok'):'not available'));
+    if(!ok)throw new Error(msg||'could not save on this device');
+    return msg;
+  },
+  del:async function(u){
+    tomb[u]=Date.now();delete memo[u];
+    var ok=saveLocal(localList().filter(function(x){return x.u!==u})),db=await getDb(),msg='';
+    if(db){try{await tmo(db.collection('staff').doc(u)['delete'](),8000);ok=true}catch(e){msg=e&&e.message||'shared storage error'}}
+    if(!ok)throw new Error(msg||'could not save on this device');
+  }
+};
+function attLocal(){try{return JSON.parse(localStorage.getItem('bhc_att')||'[]')}catch(e){return[]}}
+var att={
+  add:async function(r){var db=await getDb();if(db){var ref=await db.collection('attendance').add(r);return ref.id}var l=attLocal();r.id='a'+Date.now();l.push(r);localStorage.setItem('bhc_att',JSON.stringify(l));return r.id},
+  out:async function(id,t){var db=await getDb();if(db){await db.collection('attendance').doc(id).update({tout:t});return}var l=attLocal();l.forEach(function(x){if(x.id===id)x.tout=t});localStorage.setItem('bhc_att',JSON.stringify(l))},
+  list:async function(){var db=await getDb();if(db){var q=await db.collection('attendance').orderBy('tin','desc').limit(1000).get();return q.docs.map(function(d){var x=Object.assign({},d.data());x.id=d.id;return x})}return attLocal()}
+};
+async function allAccts(){var all=STAFF.slice();try{(await store.list()).forEach(function(x){all.push(x)})}catch(e){}return all}
+async function login(){
+  if(Date.now()<lock){err('Too many attempts. Please wait a moment.');return}
+  if(!(window.crypto&&crypto.subtle)){err('Login is not supported in this browser.');return}
+  var u=$('su').value.trim().toLowerCase(),p=$('sp').value,hit=null,pend=false,all=await allAccts(),dbOk=null;try{dbOk=await getDb()}catch(e){}
+  for(var i=0;i<all.length;i++){var c=all[i];if(c.u===u&&await sha(c.s+p)===c.h){if(c.st==='pending')pend=true;else if(c.st!=='rejected')hit=c}}
+  if(hit){fails=0;authOk=true;role=hit.r||'staff';who=hit.u;aid='';try{aid=await att.add({u:who,n:hit.n||hit.u,r:role,tin:Date.now(),tout:null})}catch(e){}try{sessionStorage.setItem('bhc_staff',JSON.stringify({u:who,r:role,a:aid}))}catch(e){}$('sp').value='';err('');route()}
+  else if(pend){err('Your registration is waiting for admin approval.'+(dbOk?'':' This device cannot reach shared storage, so it cannot see approvals made on other devices.'))}
+  else{fails++;if(fails>=5){lock=Date.now()+30000;fails=0}err('Wrong username or password.')}
+}
+function rerr(t,ok){var e=$('rerr');e.textContent=t;e.style.color=ok?'var(--text)':'var(--red)'}
+async function register(){
+  if(!(window.crypto&&crypto.subtle)){rerr('Registration is not supported in this browser.');return}
+  var n=$('rn').value.trim(),u=$('ru').value.trim().toLowerCase(),p=$('rp').value;
+  if(!n){rerr('Please enter your full name.');return}
+  if(!/^[a-z0-9_]{3,20}$/.test(u)){rerr('Username: 3 to 20 letters, numbers or underscores.');return}
+  if(p.length<8){rerr('Password must be at least 8 characters.');return}
+  if(p!==$('rp2').value){rerr('Passwords do not match.');return}
+  try{
+    var all=await allAccts();if(all.some(function(x){return x.u===u})){rerr('That username is taken.');return}
+    var salt=Array.from(crypto.getRandomValues(new Uint8Array(8))).map(function(x){return x.toString(16).padStart(2,'0')}).join('');
+    var hh=await sha(salt+p);await store.put({u:u,n:n,s:salt,h:hh,r:'staff',st:'pending',at:Date.now()});
+    ['rn','ru','rp','rp2'].forEach(function(i){$(i).value=''});
+    var sh=null;try{sh=await getDb()}catch(e){}
+    rerr(sh?'Registered. You can log in once the admin approves your account.':'Registered on this device only. The admin must approve it on this same device before you can log in.',true);
+  }catch(e){rerr('Could not register: '+(e&&e.message||'unknown error'))}
+}
+$('toreg').onclick=function(e){e.preventDefault();$('regbox').hidden=!$('regbox').hidden};
+$('rgo').onclick=register;
+function applyRole(){
+  var ad=authOk&&role==='admin';
+  ['smonth','sexport','sexport2','sacctbtn'].forEach(function(i){$(i).style.display=ad?'':'none'});
+  if(ad)drawAccts();
+}
+async function drawAccts(){
+  var L=$('slist');L.textContent='';var list=[];try{list=await store.list()}catch(e){}
+  var dbm=null;try{dbm=await getDb()}catch(e){}
+  L.appendChild(el('div','sempty','Accounts are saved on: '+(dbm?'shared storage and this device':'this device only')));
+  var pend=list.filter(function(x){return x.st==='pending'}).length;
+  $('sacctbtn').textContent='Staff accounts'+(pend?' ('+pend+' new)':'');
+  STAFF.forEach(function(x){var r=el('div','so');r.appendChild(el('b',null,x.u));r.appendChild(el('small',null,' \u00b7 '+x.r+' \u00b7 built-in'));L.appendChild(r)});
+  list.forEach(function(x){
+    var r=el('div','so');r.appendChild(el('b',null,(x.n||x.u)+' ('+x.u+')'));r.appendChild(el('small',null,' \u00b7 '+(x.st||'approved')));
+    var ac=el('div','sacts');
+    if(x.st==='pending'){var ap=el('button','sbtn sm','Approve');ap.onclick=async function(){dl('Approve tapped for '+x.u);$('sacctmsg').textContent='';$('sacctmsg').style.color='';x=Object.assign({},x,{st:'approved',v:(x.v||0)+1});ap.disabled=true;ap.textContent='Approving...';var wm='';try{wm=await store.put(x)}catch(e){ap.disabled=false;ap.textContent='Approve';$('sacctmsg').textContent='Could not save the approval: '+(e&&e.message||'unknown error');return}await drawAccts();$('sacctmsg').style.color='var(--text)';$('sacctmsg').textContent='Approved '+(x.n||x.u)+'. '+(wm?'Saved on this device only ('+wm+'), so other devices will not see it yet.':'They can now log in.')};ac.appendChild(ap)}
+    if(x.st!=='pending'){var rs=el('button','sbtn sm ghost','Reset password');rs.onclick=function(){resetForm(x)};ac.appendChild(rs)}
+    var rm=el('button','sbtn sm ghost',x.st==='pending'?'Reject':'Remove');rm.onclick=async function(){$('sacctmsg').textContent='';try{await store.del(x.u)}catch(e){$('sacctmsg').textContent='Could not update the account: '+(e&&e.message||'unknown error');return}drawAccts()};ac.appendChild(rm);
+    r.appendChild(ac);L.appendChild(r);
+  });
+  if(!list.length)L.appendChild(el('div','sempty','No registrations found on this device. Registrations made on other devices only appear here when both devices are signed in to claude.ai with an invited account.'));
+}
+function hex8(){return Array.from(crypto.getRandomValues(new Uint8Array(8))).map(function(v){return v.toString(16).padStart(2,'0')}).join('')}
+function resetForm(x){
+  var o=$('admout'),msg=$('sacctmsg');o.textContent='';msg.textContent='';
+  var b=el('div','so');b.appendChild(el('b',null,'Reset password for '+(x.n||x.u)+' ('+x.u+')'));
+  var i=el('input');i.type='text';i.placeholder='New password (8+ characters)';i.style.cssText='width:100%;margin:8px 0;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--text);font:inherit';b.appendChild(i);
+  var g=el('button','sbtn sm','Reset password');
+  g.onclick=async function(){
+    if(i.value.length<8){msg.textContent='Password must be at least 8 characters.';return}
+    msg.textContent='';
+    try{
+      var salt=hex8(),h=await sha(salt+i.value);
+      await store.put(Object.assign({},x,{s:salt,h:h,st:'approved',v:(x.v||0)+1}));
+      o.textContent='';o.appendChild(el('p',null,'Password reset for '+(x.n||x.u)+'. Tell them the new password.'));
+    }catch(e){msg.textContent='Could not reset: '+(e&&e.message||'unknown error')}
+  };
+  b.appendChild(g);o.appendChild(b);
+}
+$('sacctbtn').onclick=function(){$('sacct').hidden=false;drawAccts()};
+$('sacctclose').onclick=function(){$('sacct').hidden=true};
+$('sgo').onclick=login;
+$('sp').addEventListener('keydown',function(e){if(e.key==='Enter')login()});
+$('slogout').onclick=function(){var a0=aid;aid='';if(a0)att.out(a0,Date.now()).catch(function(){});authOk=false;try{sessionStorage.removeItem('bhc_staff')}catch(e){}route()};
+function persist(){try{localStorage.setItem('bhc_orders',JSON.stringify(Array.from(orders)))}catch(e){}}
+async function start(){
+  if(started)return;started=true;render();
+  var u=null,db=null;
+  try{u=window.claude&&await claude.use('user')}catch(e){}
+  if(u&&u.can('data.write')!==false){try{db=await claude.use('db')}catch(e){}}
+  if(!db){
+    try{JSON.parse(localStorage.getItem('bhc_orders')||'[]').forEach(function(r){orders.set(r[0],r[1])})}catch(e){}
+    banner('Orders are saved on this device only. To share one board between devices, open this page signed in to claude.ai with an invited account.');
+    render();return;
+  }
+  col=db.collection('orders');
+  col.orderBy('createdAt','desc').limit(1000).onSnapshot(function(s){orders.clear();s.docs.forEach(function(d){orders.set(d.id,d.data())});render()},function(){banner('Could not load orders. Please reload.')});
+}
+async function write(f){try{await f()}catch(e){banner('That change could not be saved: '+(e&&e.message||'unknown error'))}}
+function setStatus(id,s){if(!col){orders.get(id).status=s;persist();render();return}write(function(){return col.doc(id).update({status:s})})}
+function remove(id){if(!col){orders['delete'](id);persist();render();return}write(function(){return col.doc(id)['delete']()})}
+function p2(n){return String(n).padStart(2,'0')}
+function nextRef(){
+  var max=0,m;
+  orders.forEach(function(z){m=/^BHC-(\d+)$/i.exec(z.ref||'');if(m&&parseInt(m[1],10)>max)max=parseInt(m[1],10)});
+  try{var sv=parseInt(localStorage.getItem('bhc_seq')||'0',10);if(sv>max)max=sv}catch(e){}
+  var n=max+1;try{localStorage.setItem('bhc_seq',String(n))}catch(e){}
+  return 'BHC-'+String(n).padStart(4,'0');
+}
+function parse(t){
+  var o={name:'Walk-in',phone:'',type:'Pickup',address:'',notes:'',items:[],total:null,status:'new',createdAt:Date.now()};
+  t.split(/\r?\n/).forEach(function(l){
+    l=l.trim();var m;
+    if(m=l.match(/^(\d+)\s*[x\u00d7]\s*(.+)$/i))o.items.push({q:+m[1],n:m[2].trim()});
+    else if(m=l.match(/^total:\s*(?:rs\.?)?\s*([\d,]+)/i))o.total=+m[1].replace(/,/g,'');
+    else if(m=l.match(/^order:\s*(.+)/i))o.ref=m[1].trim();
+    else if(m=l.match(/^name:\s*(.+)/i))o.name=m[1].trim();
+    else if(m=l.match(/^phone:\s*(.+)/i))o.phone=m[1].trim();
+    else if(m=l.match(/^type:\s*(.+)/i))o.type=m[1].trim();
+    else if(m=l.match(/^address:\s*(.+)/i))o.address=m[1].trim();
+    else if(m=l.match(/^notes?:\s*(.+)/i))o.notes=m[1].trim();
+  });
+  return o;
+}
+function notify(o){
+  var M={"new":"we have received your order","prep":"your order is now being prepared","ready":o.type==='Delivery'?"your order is out for delivery":"your order is ready for pickup","done":"thank you for ordering"};
+  var txt="Hi "+o.name+", "+(o.ref?"order "+o.ref+": ":"")+(M[o.status]||"here is an update on your order")+". Babe's Hot Chicken";
+  var d=(o.phone||'').replace(/\D/g,'');if(d.indexOf('0')===0)d='92'+d.slice(1);
+  window.open('https://wa.me/'+d+'?text='+encodeURIComponent(txt),'_blank','noopener');
+}
+function card(id,o){
+  var c=el('div','so'),t=el('div','t');t.appendChild(el('span',null,(o.ref?o.ref+' \u00b7 ':'')+o.name));
+  t.appendChild(el('small',null,new Date(o.createdAt).toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})));c.appendChild(t);
+  var m=el('div');m.appendChild(el('span','stag',o.type));
+  if(o.phone){var a=el('a',null,o.phone);a.href='tel:'+o.phone.replace(/[^\d+]/g,'');m.appendChild(a)}c.appendChild(m);
+  var ul=el('ul');(o.items||[]).forEach(function(i){ul.appendChild(el('li',null,i.q+' x '+i.n))});c.appendChild(ul);
+  if(o.address)c.appendChild(el('div',null,'Address: '+o.address));
+  if(o.notes)c.appendChild(el('div',null,'Notes: '+o.notes));
+  if(o.total!=null){var tt=el('div',null,'Total: Rs '+o.total);tt.style.fontWeight='700';c.appendChild(tt)}
+  var ac=el('div','sacts'),ix=ST.indexOf(o.status);
+  if(NEXT[o.status]){var b=el('button','sbtn sm',NEXT[o.status]);b.onclick=function(){setStatus(id,ST[ix+1])};ac.appendChild(b)}
+  if(ix>0){var k=el('button','sbtn sm ghost','Back');k.onclick=function(){setStatus(id,ST[ix-1])};ac.appendChild(k)}
+  if(o.phone){var nb=el('button','sbtn sm ghost','Notify customer');nb.onclick=function(){notify(o)};ac.appendChild(nb)}
+  var d=el('button','sbtn sm ghost',armed===id?'Tap again to delete':'Delete');
+  d.onclick=function(){if(armed===id){armed=null;remove(id)}else{armed=id;render()}};ac.appendChild(d);
+  c.appendChild(ac);return c;
+}
+function render(){
+  var st=new Date();st.setHours(0,0,0,0);var n=0,rev=0,open=0,tally={};
+  orders.forEach(function(o){
+    if(o.status!=='done')open++;
+    if(o.createdAt>=st.getTime()){n++;rev+=o.total||0;(o.items||[]).forEach(function(i){tally[i.n]=(tally[i.n]||0)+i.q})}
+  });
+  var top=Object.keys(tally).sort(function(a,b){return tally[b]-tally[a]})[0];
+  var S=$('sstats');S.textContent='';
+  [[n,'Orders today'],[open,'Open orders'],['Rs '+rev,'Revenue today (orders with totals)'],[top?top+' ('+tally[top]+')':'-','Top item today']].forEach(function(p){
+    var x=el('div','sstat');x.appendChild(el('b',null,p[0]));x.appendChild(el('span',null,p[1]));S.appendChild(x)});
+  var list=[];orders.forEach(function(o,id){list.push([id,o])});
+  list.sort(function(a,b){return a[1].createdAt-b[1].createdAt});
+  var B=$('sboard');B.textContent='';
+  ST.forEach(function(s){
+    var rows=list.filter(function(r){return r[1].status===s}),c=el('div','scol'),h=el('h3');
+    h.appendChild(el('span',null,LBL[s]));h.appendChild(el('span',null,rows.length));c.appendChild(h);
+    if(!rows.length)c.appendChild(el('div','sempty','Nothing here'));
+    rows.forEach(function(r){c.appendChild(card(r[0],r[1]))});B.appendChild(c);
+  });
+}
+$('sadd').onclick=function(){$('sserr').textContent='';$('ssheet').hidden=false;$('stxt').focus()};
+$('scancel').onclick=function(){$('ssheet').hidden=true};
+$('ssave').onclick=function(){
+  var o=parse($('stxt').value);
+  if(!o.items.length){$('sserr').textContent='No items found. Use lines like "2 x Chicken Tenders".';return}
+  if(o.ref){var dup=false;orders.forEach(function(z){if(z.ref&&z.ref.toLowerCase()===o.ref.toLowerCase())dup=true});if(dup){$('sserr').textContent='Order '+o.ref+' is already on the board.';return}}
+  else o.ref=nextRef();
+  $('ssheet').hidden=true;$('stxt').value='';banner('Added order '+o.ref+'.');
+  if(!col){orders.set('l'+Date.now(),o);persist();render();return}
+  write(function(){return col.add(o)});
+};
+(function(){
+var d0=new Date();$('smonth').value=d0.getFullYear()+'-'+String(d0.getMonth()+1).padStart(2,'0');
+function two(n){return String(n).padStart(2,'0')}
+function csvCell(v){v=v==null?'':String(v);return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v}
+$('sexport').onclick=async function(){
+  if(!authOk||role!=='admin')return;
+  var ym=$('smonth').value;if(!ym){banner('Pick a month first.');return}
+  var p=ym.split('-'),a=new Date(+p[0],+p[1]-1,1).getTime(),b=new Date(+p[0],+p[1],1).getTime(),rows=[];
+  orders.forEach(function(o){if(o.createdAt>=a&&o.createdAt<b)rows.push(o)});
+  if(!rows.length){banner('No orders found for '+ym+'.');return}
+  rows.sort(function(x,y){return x.createdAt-y.createdAt});
+  var head=['Order #','Date','Time','Customer','Phone','Type','Items','Item count','Total (Rs)','Status','Address','Notes'];
+  var aoa=[head],tally={},sales=0,done=0,noTotal=0,cnt=0;
+  rows.forEach(function(o){
+    var dt=new Date(o.createdAt),its=(o.items||[]),q=0;
+    its.forEach(function(i){q+=i.q;tally[i.n]=(tally[i.n]||0)+i.q});
+    if(o.status==='done'){done++;if(o.total!=null)sales+=o.total;else noTotal++}
+    aoa.push([o.ref||'',dt.getFullYear()+'-'+two(dt.getMonth()+1)+'-'+two(dt.getDate()),two(dt.getHours())+':'+two(dt.getMinutes()),o.name,o.phone,o.type,its.map(function(i){return i.q+' x '+i.n}).join('; '),q,o.total==null?'':o.total,LBL[o.status]||o.status,o.address||'',o.notes||'']);
+  });
+  var names=Object.keys(tally).sort(function(x,y){return tally[y]-tally[x]});
+  var items=[['Item','Quantity sold']].concat(names.map(function(n){return [n,tally[n]]}));
+  var sum=[['Babe\'s Hot Chicken - monthly sales'],['Month',ym],['Orders placed',rows.length],['Orders completed',done],['Sales from completed orders (Rs)',sales],['Average completed order (Rs)',done-noTotal>0?Math.round(sales/(done-noTotal)):0],['Completed orders without a total',noTotal],['Top item',names[0]?names[0]+' ('+tally[names[0]]+')':'-']];
+  var dl=null;try{dl=window.claude&&await claude.use('downloads')}catch(e){}
+  if(!dl)dl=fallbackDl;
+  if(window.XLSX){
+    try{
+      var wb=XLSX.utils.book_new(),w1=XLSX.utils.aoa_to_sheet(aoa),w2=XLSX.utils.aoa_to_sheet(items),w3=XLSX.utils.aoa_to_sheet(sum);
+      w1['!cols']=[10,12,8,18,16,10,40,10,11,12,28,28].map(function(n){return{wch:n}});w2['!cols']=[{wch:30},{wch:14}];w3['!cols']=[{wch:36},{wch:24}];
+      XLSX.utils.book_append_sheet(wb,w3,'Summary');XLSX.utils.book_append_sheet(wb,w1,'Orders');XLSX.utils.book_append_sheet(wb,w2,'Items sold');
+      await dl.save({filename:'babes-sales-'+ym+'.xlsx',data:XLSX.write(wb,{type:'array',bookType:'xlsx'})});
+      banner('Exported '+rows.length+' orders for '+ym+' to Excel.');return;
+    }catch(e){if(e&&e.code==='declined')return}
+  }
+  try{
+    await dl.save({filename:'babes-sales-'+ym+'.csv',data:aoa.map(function(r){return r.map(csvCell).join(',')}).join('\n')});
+    banner('Excel file was not available, so the orders were saved as a CSV that opens in Excel.');
+  }catch(e){if(!(e&&e.code==='declined'))banner('Export failed: '+(e&&e.message||'unknown error'))}
+};
+})();
+(function(){
+function two(n){return String(n).padStart(2,'0')}
+function dstr(t){var d=new Date(t);return d.getFullYear()+'-'+two(d.getMonth()+1)+'-'+two(d.getDate())}
+function tstr(t){var d=new Date(t);return two(d.getHours())+':'+two(d.getMinutes())}
+function csvCell(v){v=v==null?'':String(v);return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v}
+$('sexport2').onclick=async function(){
+  if(!authOk||role!=='admin')return;
+  var ym=$('smonth').value;if(!ym){banner('Pick a month first.');return}
+  var p=ym.split('-'),a=new Date(+p[0],+p[1]-1,1).getTime(),b=new Date(+p[0],+p[1],1).getTime(),reg=[],logs=[];
+  try{reg=await store.list();logs=await att.list()}catch(e){banner('Could not load staff data: '+(e&&e.message||'unknown error'));return}
+  var emp=[['Name','Username','Role','Status','Registered on']];
+  STAFF.forEach(function(x){emp.push([x.u,x.u,x.r,'Active (built-in)',''])});
+  reg.forEach(function(x){emp.push([x.n||x.u,x.u,x.r||'staff',x.st||'approved',x.at?dstr(x.at):''])});
+  var rows=logs.filter(function(x){return x.tin>=a&&x.tin<b}).sort(function(x,y){return x.tin-y.tin});
+  var attn=[['Date','Name','Username','Role','Clock in','Clock out','Hours']],tot={};
+  rows.forEach(function(x){
+    var h=x.tout?Math.round((x.tout-x.tin)/36000)/100:'';
+    attn.push([dstr(x.tin),x.n||x.u,x.u,x.r,tstr(x.tin),x.tout?tstr(x.tout):'Not logged out',h]);
+    var t=tot[x.u]||(tot[x.u]={n:x.n||x.u,days:{},hrs:0});t.days[dstr(x.tin)]=1;if(h!=='')t.hrs+=h;
+  });
+  var sum=[['Name','Username','Days present','Total hours']];
+  Object.keys(tot).forEach(function(u){var t=tot[u];sum.push([t.n,u,Object.keys(t.days).length,Math.round(t.hrs*100)/100])});
+  var dl=null;try{dl=window.claude&&await claude.use('downloads')}catch(e){}
+  if(!dl)dl=fallbackDl;
+  var base='babes-staff-attendance-'+ym;
+  if(window.XLSX){
+    try{
+      var wb=XLSX.utils.book_new(),w1=XLSX.utils.aoa_to_sheet(emp),w2=XLSX.utils.aoa_to_sheet(attn),w3=XLSX.utils.aoa_to_sheet(sum);
+      w1['!cols']=[22,16,10,18,14].map(function(n){return{wch:n}});w2['!cols']=[12,22,16,10,10,16,8].map(function(n){return{wch:n}});w3['!cols']=[22,16,13,13].map(function(n){return{wch:n}});
+      XLSX.utils.book_append_sheet(wb,w1,'Employees');XLSX.utils.book_append_sheet(wb,w2,'Attendance');XLSX.utils.book_append_sheet(wb,w3,'Hours summary');
+      await dl.save({filename:base+'.xlsx',data:XLSX.write(wb,{type:'array',bookType:'xlsx'})});
+      banner('Exported '+rows.length+' attendance records for '+ym+' to Excel.');return;
+    }catch(e){if(e&&e.code==='declined')return}
+  }
+  try{
+    await dl.save({filename:base+'.csv',data:attn.map(function(r){return r.map(csvCell).join(',')}).join('\n')});
+    banner('Excel file was not available, so attendance was saved as a CSV that opens in Excel.');
+  }catch(e){if(!(e&&e.code==='declined'))banner('Export failed: '+(e&&e.message||'unknown error'))}
+};
+})();
+route();
+})();
+</script>
+<script>
+(function(){
+var WA='923441111804';
+function $(i){return document.getElementById(i)}
+function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+function last(){try{return JSON.parse(localStorage.getItem('bhc_last')||'null')}catch(e){return null}}
+function wa(t){window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(t),'_blank','noopener')}
+function draw(){
+  var b=$('tk');b.textContent='';var o=last();
+  if(o){
+    b.appendChild(el('h3',null,o.id?'Order '+o.id:'Order sent'));
+    b.appendChild(el('p',null,'Sent at '+new Date(o.at).toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})+'. We will message you your order number on WhatsApp once we confirm it.')).style.margin='6px 0';
+    var ul=el('ul');o.items.forEach(function(i){ul.appendChild(el('li',null,i))});b.appendChild(ul);
+    var st=el('div','steps');['Order sent','Confirmed','Preparing','Ready'].forEach(function(n,i){st.appendChild(el('div',i===0?'on':'',n))});b.appendChild(st);
+    b.appendChild(el('p',null,'We will message you on WhatsApp as your order moves along. If you have not heard from us in a few minutes, tap below.'));
+    var a=el('button','btn primary','Ask for an update');a.type='button';a.style.marginRight='8px';a.style.marginTop='12px';a.onclick=function(){wa(o.id?'Hi, could I get an update on order '+o.id+'?':'Hi, could I get an update on my order ('+o.items.join(', ')+') sent at '+new Date(o.at).toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})+'?')};b.appendChild(a);
+    var c=el('button','btn','Hide this order');c.type='button';c.style.marginTop='12px';c.style.background='transparent';c.style.border='2px solid var(--red)';c.style.color='var(--red)';
+    c.onclick=function(){try{localStorage.removeItem('bhc_last')}catch(e){}draw()};b.appendChild(c);
+  }else{
+    b.appendChild(el('p',null,'Place an order and its number will show up here. Already ordered? Enter your order number to ask for an update.'));
+    var i=el('input');i.id='tkid';i.placeholder='Order number, e.g. BHC-0001';i.setAttribute('aria-label','Order number');b.appendChild(i);
+    b.appendChild(el('br'));
+    var a2=el('button','btn primary','Ask on WhatsApp');a2.type='button';a2.onclick=function(){var v=i.value.trim();wa(v?'Hi, could I get an update on order '+v+'?':'Hi, could I get an update on my order?')};b.appendChild(a2);
+  }
+}
+document.addEventListener('bhc-order',function(e){try{localStorage.setItem('bhc_last',JSON.stringify(e.detail))}catch(x){}draw()});
+draw();
+})();
+</script>
+</body>
+</html>
